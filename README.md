@@ -1,3 +1,14 @@
+#HotZone front end
+
+HotZone is an application that will manage data of each confirmed case of a viral infection of interest and 
+locations visited by the patient during the Infectious Period. 
+
+This application only handle the simple case where there is a single GeoData location that satisfies the search criteria 
+and the location is not already known to HotZone.
+
+URL for the application: https://lit-sands-52904.herokuapp.com/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

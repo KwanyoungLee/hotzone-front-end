@@ -41,7 +41,7 @@ const RecordTable = () => {
   useEffect(() => {
     const getRecords = () => {
       axios.get(
-        "http://localhost:8000/case/list"
+        "https://fathomless-atoll-87588.herokuapp.com/case/list"
         ).then((res) => {
           setRecords(res.data);
         }).catch((error) => {

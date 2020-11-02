@@ -58,7 +58,7 @@ const SingleRecord = ({match}) => {
   useEffect(() => {
     const getRecords = () => {
       axios.get(
-        `http://localhost:8000/case/list/${recordId}`
+        `https://fathomless-atoll-87588.herokuapp.com/case/list/${recordId}`
         ).then((res) => {
           setRecord(res.data[0]);
         }).catch((error) => {
@@ -67,7 +67,7 @@ const SingleRecord = ({match}) => {
     }
     const getLocations = () => {
       axios.get(
-        `http://localhost:8000/case/list/${recordId}/location`
+        `https://fathomless-atoll-87588.herokuapp.com/${recordId}/location`
         ).then((res) => {
           setLocations(res.data);
         }).catch((error) => {
@@ -114,7 +114,7 @@ const SingleRecord = ({match}) => {
 
     if (!window.confirm("Are you sure you want to add this item?")) return;
     axios.post(
-      `http://localhost:8000/case/list/${recordId}/location`, DTO
+      `https://fathomless-atoll-87588.herokuapp.com/case/list/${recordId}/location`, DTO
     ).then(res => {
       window.location.reload();
     }).catch(error => {
@@ -123,8 +123,9 @@ const SingleRecord = ({match}) => {
   }
 
   const handleSearch = (e) => {
+    if (searchInput==="") return;
     axios.get(
-      'http://127.0.0.1:8000/location/geodata/',{params:{q:searchInput}}
+      'https://fathomless-atoll-87588.herokuapp.com/location/geodata/',{params:{q:searchInput}}
     ).then(res => {
       setGeoData(res.data[0]);
     }).catch(error => {
