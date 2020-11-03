@@ -70,7 +70,6 @@ const SingleRecord = ({match}) => {
         `https://fathomless-atoll-87588.herokuapp.com/case/list/${recordId}/location`
         ).then((res) => {
           setLocations(res.data);
-          console.log(res.data);
         }).catch((error) => {
           alert("Error!");
         });
