@@ -67,7 +67,7 @@ const SingleRecord = ({match}) => {
     }
     const getLocations = () => {
       axios.get(
-        `https://fathomless-atoll-87588.herokuapp.com/${recordId}/location`
+        `https://fathomless-atoll-87588.herokuapp.com/case/list/${recordId}/location`
         ).then((res) => {
           setLocations(res.data);
         }).catch((error) => {
